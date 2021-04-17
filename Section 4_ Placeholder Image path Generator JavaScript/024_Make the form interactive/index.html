@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Image Size:
+    <select>
+        <option value="150*150">Small</option>
+        <option value="350*150">Medium</option>
+        <option value="650*50">Large</option>
+    </select>
+    Text on Image:
+    <input type="text">
+    Color of Background:
+    <input type="color" id="bck" value="#dddddd"><br>
+    Color of Text:
+    <input type="color" id="txt" value="#ff0000"><br>
+    <img src="">
+    <script>
+        const sel = document.querySelector("select");
+        const inpAll = document.querySelector("input");
+
+        sel.addEventListener("change", build);
+        inpAll.forEach(function (item) {
+            console.log(item);
+            item.addEventListener("change", build);
+        })
+
+        function build(e) {
+            console.log(e);
+        }
+    </script>
+
+</body>
+
+</html>
